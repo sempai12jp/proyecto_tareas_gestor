@@ -1,0 +1,171 @@
+/* Variables globales */
+:root {
+  /* Colores principales */
+  --color-primario: #2563eb;
+  --color-secundario: #7c3aed;
+  --color-terciario: #10b981;
+
+  /* Colores de estado */
+  --color-pendiente: #3b82f6;
+  --color-progreso: #f59e0b;
+  --color-completado: #10b981;
+
+  /* Tipografía */
+  --fuente-principal: 'Segoe UI', system-ui, sans-serif;
+  --tamano-base: 16px;
+
+  /* Espaciado */
+  --espacio-xs: 0.5rem;
+  --espacio-sm: 1rem;
+  --espacio-md: 1.5rem;
+  --espacio-lg: 2rem;
+}
+
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  font-size: var(--tamano-base);
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Header */
+header {
+  background-color: var(--color-primario);
+  color: white;
+  padding: var(--espacio-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--espacio-sm);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-sm);
+  margin: var(--espacio-md) 0;
+}
+
+button {
+  background-color: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: var(--espacio-sm);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-terciario);
+}
+
+/* Kanban */
+#kanban {
+  display: flex;
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-lg);
+}
+
+.columna {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: var(--espacio-sm);
+}
+
+.columna h3 {
+  margin-top: 0;
+}
+
+.tareas-container {
+  min-height: 150px;
+  padding: var(--espacio-xs);
+}
+
+/* Estilos para tarjetas de tareas */
+.tarea {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: var(--espacio-sm);
+  margin-bottom: var(--espacio-sm);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tarea p {
+  margin: 0.5rem 0;
+}
+
+.tarea button {
+  margin-right: var(--espacio-xs);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Colores semanticos para acciones */
+.tarea .btn-progreso {
+  background-color: var(--color-progreso);
+}
+
+.tarea .btn-progreso:hover {
+  background-color: rgba(245, 158, 11, 0.85);
+}
+
+.tarea .btn-completada {
+  background-color: var(--color-completado);
+}
+
+.tarea .btn-completada:hover {
+  background-color: rgba(16, 185, 129, 0.85);
+}
+
+.tarea .btn-eliminar {
+  background-color: #ef4444;
+}
+
+.tarea .btn-eliminar:hover {
+  background-color: rgba(239, 68, 68, 0.85);
+}
+
+/* Colores por estado */
+#pendientes h3 { color: var(--color-pendiente); }
+#en-progreso h3 { color: var(--color-progreso); }
+#completadas h3 { color: var(--color-completado); }
+
+/* Footer */
+footer {
+  background-color: var(--color-primario);
+  color: white;
+  text-align: center;
+  padding: var(--espacio-sm);
+  margin-top: var(--espacio-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #kanban {
+    flex-direction: column;
+  }
+}

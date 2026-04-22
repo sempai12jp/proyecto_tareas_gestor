@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de Tareas</title>
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="assets/img/logo.png" alt="Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Tareas</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Formulario agregar tarea -->
+    <section id="formulario">
+      <h2>Agregar Tarea</h2>
+      <form>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" required></textarea>
+
+        <label for="prioridad">Prioridad:</label>
+        <select id="prioridad" required>
+          <option value="">Seleccionar...</option>
+          <option value="alta">Alta</option>
+          <option value="media">Media</option>
+          <option value="baja">Baja</option>
+        </select>
+
+        <label for="fecha">Fecha límite:</label>
+        <input type="date" id="fecha" required>
+
+        <button type="submit">Agregar Tarea</button>
+      </form>
+    </section>
+
+    <!-- Tablero Kanban -->
+    <section id="kanban">
+      <h2>Tablero Kanban</h2>
+      <div class="columna" id="pendientes">
+        <h3>Pendientes <span class="contador">0</span></h3>
+        <div class="tareas-container"></div>
+      </div>
+
+      <div class="columna" id="en-progreso">
+        <h3>En Progreso <span class="contador">0</span></h3>
+        <div class="tareas-container"></div>
+      </div>
+
+      <div class="columna" id="completadas">
+        <h3>Completadas <span class="contador">0</span></h3>
+        <div class="tareas-container"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contacto: gestor@ejemplo.com</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
